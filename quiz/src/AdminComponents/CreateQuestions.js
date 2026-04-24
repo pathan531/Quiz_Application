@@ -25,7 +25,7 @@ function CreateQuestions() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/add/questions", {
+      const res = await fetch("http://13.206.88.148:5000/api/add/questions", {
         method: "POST",
         headers: { 
           "Content-Type": "application/json",

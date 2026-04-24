@@ -37,7 +37,7 @@ function MyResults() {
       let body = {};
 
       if (isAuthenticated && user) {
-        url = "http://localhost:5000/api/auth/current/score";
+        url = "http://13.206.88.148:5000/api/auth/current/score";
         token = authToken;
         body = { email: user.email, quiz_type };
       } else {

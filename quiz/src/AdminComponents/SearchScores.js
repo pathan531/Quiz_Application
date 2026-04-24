@@ -14,7 +14,7 @@ function SearchScores() {
     const fetchAllResults = async () => {
       setLoading(true);
       try {
-        const res = await fetch("http://localhost:5000/api/all/scores");
+        const res = await fetch("http://13.206.88.148:5000/api/all/scores");
         const data = await res.json();
         setResults(data);
       } catch (error) {
@@ -39,7 +39,7 @@ function SearchScores() {
     setSearched(true);
 
     try {
-      const res = await fetch("http://localhost:5000/api/search/scores", {
+      const res = await fetch("http://13.206.88.148:5000/api/search/scores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

@@ -21,7 +21,7 @@ function SearchScores() {
     setError("");
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/all/scores", {
+      const res = await fetch("http://13.206.88.148:5000/api/all/scores", {
         method: "GET",
         headers: {
           "Content-Type": "application/json",
@@ -63,7 +63,7 @@ function SearchScores() {
 
     try {
       const token = localStorage.getItem("token");
-      const res = await fetch("http://localhost:5000/api/search/scores", {
+      const res = await fetch("http://13.206.88.148:5000/api/search/scores", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

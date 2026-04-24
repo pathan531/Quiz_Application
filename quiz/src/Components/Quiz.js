@@ -67,7 +67,7 @@ function Quiz() {
     useEffect(() => {
         const authToken = sessionStorage.getItem("authtoken")
         if (authToken && user) {
-            fetch("http://localhost:5000/api/auth/users", {
+            fetch("http://13.206.88.148:5000/api/auth/users", {
                 method: "POST",
                 headers: {
                     "Content-Type": "application/json",
@@ -93,8 +93,8 @@ function Quiz() {
         const regularToken = localStorage.getItem("token")
         const token = authToken || regularToken
         const endpoint = authToken 
-            ? `http://localhost:5000/api/auth/questions?quizType=${quizType}`
-            : `http://localhost:5000/api/questions?quizType=${quizType}`
+            ? `http://13.206.88.148:5000/api/auth/questions?quizType=${quizType}`
+            : `http://13.206.88.148:5000/api/questions?quizType=${quizType}`
             
 
         if (!token) {
@@ -159,8 +159,8 @@ function Quiz() {
         const percentage = Math.round((score / total_questions) * 100)
 
         const endpoint = authToken
-            ? "http://localhost:5000/api/auth/users/score"
-            : "http://localhost:5000/api/score"
+            ? "http://13.206.88.148:5000/api/auth/users/score"
+            : "http://13.206.88.148:5000/api/score"
 
         fetch(endpoint, {
             method: "POST",
